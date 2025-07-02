@@ -1,0 +1,42 @@
+/* ================================================
+   Script Name   : create_datawarehouse.sql
+   Project       : SQL Data Warehouse Project
+   Description   : 
+       Initializes the DataWarehouse database and 
+       defines a layered schema architecture for 
+       data processing and analytics.
+
+       - Creates the 'DataWarehouse' database
+       - Creates 3 schemas:
+           • bronze: raw source data
+           • silver: cleaned/transformed data
+           • gold: aggregated/report-ready data
+
+   Author        : Reem Adel
+   Created On    : [Add Date Here]
+   ================================================ */
+
+
+USE master;
+GO
+
+CREATE DATABASE DataWarehouse;
+GO
+
+-- Switch to the newly created database
+USE DataWarehouse;
+GO
+
+-- Create schemas for data processing layers
+
+-- Bronze Layer: Raw data from source systems
+CREATE SCHEMA bronze;
+GO
+
+-- Silver Layer: Cleaned and transformed data
+CREATE SCHEMA silver;
+GO
+
+-- Gold Layer: Aggregated and analytics-ready data
+CREATE SCHEMA gold;
+GO
